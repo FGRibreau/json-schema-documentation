@@ -60,16 +60,7 @@ ${JSON.stringify(sample, null, 2)}
     };
   });
 
-  debug('Generating README..');
-  files.push({
-    name: 'README.md',
-    content: `
-# Table of content
-
-${files.map(f => `[${f.raw.source.$id}](${f.name})`).join('\n')}
-`.trim(),
-    raw: {},
-  });
+  files.push(require('./readme-generator')(files));
 
   return writer(files, options.directory);
 };

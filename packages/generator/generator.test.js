@@ -90,7 +90,7 @@ test('generate a complete documentation (default configuration)', () => {
         pathExists(
           path.resolve(
             __dirname,
-            'demo/test1/httpsrawgithubusercontentcomfgribreaujson-schema-documentationmasterpackagesgeneratorschemasgenerator-optionjson.md'
+            'demo/theme-default/httpsrawgithubusercontentcomfgribreaujson-schema-documentationmasterpackagesgeneratorschemasgenerator-optionjson.md'
           )
         )
       ).toBe(true);
