@@ -5,19 +5,24 @@
   "main": "generator.js",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch --notify"
+    "test:watch": "jest --watch --notify",
+    "test:coverage": "jest --coverage"
   },
   "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
   "license": "MIT",
   "dependencies": {
     "ajv": "^5.5.0",
     "common-env": "^6.1.0",
+    "error-ex": "^1.3.1",
     "lodash": "^4.17.4"
   },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
-    "jest": "^21.2.1"
+    "jest": "^21.2.1",
+    "json-schema-documentation-sample-generator": "^0.1.1",
+    "json-schema-documentation-theme-default": "^0.2.0",
+    "path-exists": "^3.0.0"
   }
 }

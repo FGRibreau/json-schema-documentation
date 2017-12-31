@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`yield an error promise if an empty option object was given 1`] = `
+" Invalid options parameter
+-  should have required property 'input'
+-  should have required property 'output'"
+`;
+
+exports[`yield an error promise if no option are given 1`] = `
+" Invalid options parameter
+-  should be object"
+`;
+
+exports[`yield error is a schema does not have an id 1`] = `
+" Invalid options parameter
+- .input.schemas[1] should have required property '$id'"
+`;

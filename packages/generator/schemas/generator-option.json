@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema",
+  "$id":
+    "https://raw.githubusercontent.com/fgribreau/json-schema-documentation/master/packages/generator/schemas/generator-option.json",
+  "type": "object",
+  "title": "generator option object",
+  "description": "The generator function only take one object as a parameter",
+  "required": ["input", "output"],
+  "properties": {
+    "input": {
+      "type": "object",
+      "title": "input configuration",
+      "description":
+        "Define what the generator will use to generate the intermediate representation of schemas",
+      "required": ["schemas", "samples"],
+      "properties": {
+        "schemas": {
+          "type": "array",
+          "title": "Schemas to generate a documentation for",
+          "description": "An array of json-schemas object",
+          "items": {
+            "type": "object",
+            "required": ["$id"],
+            "properties": {
+              "$id": {
+                "type": "string",
+                "title": "schema $id",
+                "description":
+                  "schema.$id is required by json-schema-documentation-generator"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "samples": {
+          "type": "object",
+          "title": "JSON-Schema Sample configuration",
+          "description": "",
+          "required": ["generator"],
+          "properties": {
+            "generator": {
+              "title": "sample generator function",
+              "additionalProperties": true
+            }
+          }
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "title": "output configuration",
+      "description":
+        "Define what the generator will use to generate the representation of schema (a-k-a the documentation) based on the intermediate representation",
+      "required": ["theme", "options"],
+      "properties": {
+        "theme": {
+          "title": "Theme generator",
+          "description":
+            "Theme generator function to use to generate the documentation",
+          "additionalProperties": true
+        },
+        "options": {
+          "type": "object",
+          "title": "theme options",
+          "description": "",
+          "required": [],
+          "additionalProperties": true
+        }
+      }
+    }
+  }
+}
