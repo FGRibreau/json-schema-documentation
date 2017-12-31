@@ -13,6 +13,6 @@ npm install
 
 ## Getting started
 
-* [Use the CLI](/packages/cli) [![NPM version](https://img.shields.io/npm/v/json-schema-documentation-cli.svg)](https://www.npmjs.com/package/json-schema-documentation-cli)
-* [Use the generator from code](/packages/generator) [![NPM version](https://img.shields.io/npm/v/json-schema-documentation-generator.svg)](https://www.npmjs.com/package/json-schema-documentation-generator)
-* [Fork default theme](/packages/theme-default) [![NPM version](https://img.shields.io/npm/v/json-schema-documentation-theme-default.svg)](https://www.npmjs.com/package/json-schema-documentation-theme-default)
+* [![NPM version](https://img.shields.io/npm/v/json-schema-documentation-cli.svg)](https://www.npmjs.com/package/json-schema-documentation-cli) [Use the CLI](/packages/cli)
+* [![NPM version](https://img.shields.io/npm/v/json-schema-documentation-generator.svg)](https://www.npmjs.com/package/json-schema-documentation-generator) [Use the generator from code](/packages/generator)
+*  [![NPM version](https://img.shields.io/npm/v/json-schema-documentation-theme-default.svg)](https://www.npmjs.com/package/json-schema-documentation-theme-default) [Fork default theme](/packages/theme-default)
