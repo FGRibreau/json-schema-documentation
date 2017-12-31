@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema",
+  "$id":
+    "https://raw.githubusercontent.com/fgribreau/json-schema-documentation/master/packages/theme-defaumt/schemas/theme-option.json",
+  "type": "object",
+  "title": "theme option object",
+  "description":
+    "The theme generator function only take one object as a parameter",
+  "required": ["directory"],
+  "properties": {
+    "directory": {
+      "type": "object",
+      "title": "Output directory configuration",
+      "description": "",
+      "required": ["path"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "title": "Output directory path",
+          "description": "",
+          "example": "static/"
+        }
+      }
+    }
+  }
+}
