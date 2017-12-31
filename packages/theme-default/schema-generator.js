@@ -32,9 +32,9 @@ ${mapSchemaKeys(source, toMarkdown).join('\n\n')}
 
 function reduceSchemaKeys(data, iterator, init) {
   traverse(data, { allKeys: true }, (...args) => {
-    if (last(args) === 0) {
-      // keyIndex
-      return;
+    if (!args[1]) {
+      // root
+      return init;
     }
 
     init = iterator(init, ...args);
@@ -68,11 +68,15 @@ function toMarkdown(
 ### \`${humanizeJsonPtr(jsonPtr)}\`
 
 ${iff(schema.title, () => `**${schema.title}**`)}
+
 ${iff(schema.description, () => schema.description)}
 
 ${iff(schema.type, () => `*Type*: ${schema.type}`)}
+
 ${iff(schema.minimum, () => `*Minimum*: ${schema.minimum}`)}
+
 ${iff(schema.maximum, () => `*Maximum*: ${schema.maximum}`)}
+
 ${iff(schema.example, () => `*Example*: ${schema.example}`)}
 
   `.trim();

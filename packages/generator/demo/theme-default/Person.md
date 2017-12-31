@@ -15,19 +15,16 @@ Describe a person
 
 ### Documentation
 
-### ``
-
-**Person**
-Describe a person
-
-*Type*: object
-
 ### `.firstName`
 
 
 
 
+
 *Type*: string
+
+
+
 
 
 *Example*: dupont
@@ -37,7 +34,11 @@ Describe a person
 
 
 
+
 *Type*: string
+
+
+
 
 
 *Example*: dupont
@@ -45,9 +46,13 @@ Describe a person
 ### `.age`
 
 
+
 Age in years
 
 *Type*: integer
+
+
+
 
 
 *Example*: 10
