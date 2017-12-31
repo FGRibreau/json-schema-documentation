@@ -57,7 +57,6 @@ test('yield error is a schema does not have an id', () => {
 });
 
 test('generate a complete documentation (default configuration)', () => {
-  expect.assertions(3);
   return generator({
     input: {
       schemas: [
@@ -94,6 +93,14 @@ test('generate a complete documentation (default configuration)', () => {
           )
         )
       ).toBe(true);
+      expect(
+        pathExists(
+          path.resolve(
+            __dirname,
+            'demo/theme-default-full/httpjson-schemaorgdraft-06schema.md'
+          )
+        )
+      ).toBe(true);
     },
     err => {
       throw err;
@@ -102,7 +109,6 @@ test('generate a complete documentation (default configuration)', () => {
 });
 
 test('generate a complete documentation (restrict)', () => {
-  expect.assertions(3);
   return generator({
     input: {
       schemas: [
@@ -140,6 +146,14 @@ test('generate a complete documentation (restrict)', () => {
           path.resolve(
             __dirname,
             'demo/theme-default/httpsrawgithubusercontentcomfgribreaujson-schema-documentationmasterpackagesgeneratorschemasgenerator-optionjson.md'
+          )
+        )
+      ).toBe(true);
+      expect(
+        pathExists(
+          path.resolve(
+            __dirname,
+            'demo/theme-default/packages/generator/demo/theme-default-full/httpjson-schemaorgdraft-06schema.md'
           )
         )
       ).toBe(false);

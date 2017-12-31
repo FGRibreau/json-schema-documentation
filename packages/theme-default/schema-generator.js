@@ -65,7 +65,7 @@ function toMarkdown(
 ) {
   console.log(schema);
   return `
-### \`${jsonPtr}\`
+### \`${humanizeJsonPtr(jsonPtr)}\`
 
 ${iff(schema.title, () => `**${schema.title}**`)}
 ${iff(schema.description, () => schema.description)}
@@ -84,4 +84,11 @@ function iff(v, f) {
   }
 
   return f();
+}
+
+function humanizeJsonPtr(ptr) {
+  return ptr
+    .split('/')
+    .map(x => (x === 'properties' ? '.' : x === 'items' ? '[]' : x))
+    .join('');
 }

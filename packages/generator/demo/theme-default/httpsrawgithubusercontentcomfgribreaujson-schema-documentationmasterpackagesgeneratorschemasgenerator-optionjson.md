@@ -19,60 +19,72 @@ The generator function only take one object as a parameter
 
 ### Documentation
 
-### `Generator `option` object`
+### ``
 
+**Generator `option` object**
 The generator function only take one object as a parameter
 
 *Type*: object
 
-### `input configuration`
+### `.input`
 
+**input configuration**
 Define what the generator will use to generate the intermediate representation of schemas
 
 *Type*: object
 
-### `Schemas to generate a documentation for`
+### `.input.schemas`
 
+**Schemas to generate a documentation for**
 An array of json-schemas object
 
 *Type*: array
 
-### `/properties/input/properties/schemas/items`
+### `.input.schemas[]`
+
 
 
 
 *Type*: object
 
-### `schema $id`
+### `.input.schemas[].$id`
 
+**schema $id**
 schema.$id is required by json-schema-documentation-generator
 
 *Type*: string
 
-### `Filter predicate over schema`
+### `.input.filter`
 
+**Filter predicate over schema**
 (schema) => boolean
 
-### `JSON-Schema Sample configuration`
+### `.input.samples`
 
+**JSON-Schema Sample configuration**
 
 
 *Type*: object
 
-### `sample generator function`
+### `.input.samples.generator`
 
-### `output configuration`
+**sample generator function**
 
+### `.output`
+
+**output configuration**
 Define what the generator will use to generate the representation of schema (a-k-a the documentation) based on the intermediate representation
 
 *Type*: object
 
-### `Theme generator`
+### `.output.theme`
 
+**Theme generator**
 Theme generator function to use to generate the documentation
 
-### `theme options`
+### `.output.options`
 
+**theme options**
 
 
 *Type*: object
