@@ -1,0 +1,24 @@
+{
+  "name": "json-schema-documentation-generator",
+  "version": "0.0.1",
+  "description": "Json-Schema documentation generator",
+  "main": "generator.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch --notify"
+  },
+  "author":
+    "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^5.5.0",
+    "common-env": "^6.1.0",
+    "lodash": "^4.17.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}
