@@ -32,6 +32,10 @@
             "additionalProperties": true
           }
         },
+        "filter": {
+          "title": "Filter predicate over schema",
+          "description": "(schema) => boolean"
+        },
         "samples": {
           "type": "object",
           "title": "JSON-Schema Sample configuration",

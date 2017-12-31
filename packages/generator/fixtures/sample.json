@@ -1,6 +1,7 @@
 {
   "$id": "Person",
   "title": "Person",
+  "description": "Describe a person",
   "type": "object",
   "properties": {
     "firstName": {

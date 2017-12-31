@@ -60,6 +60,7 @@ module.exports = options => {
   return Promise.all(
     Object.keys(schemas._schemas)
       .map(schema => schemas._schemas[schema].schema)
+      .filter(options.input.filter || (() => true))
       .map(rawSchema =>
         sampleGenerator(rawSchema).then(sample => ({
           source: rawSchema,

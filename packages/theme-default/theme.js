@@ -1,6 +1,6 @@
 'use strict';
 const debug = require('debug')('default-theme');
-const slug = require('slug');
+
 const writer = require('./writer');
 
 const Ajv = require('ajv');
@@ -40,25 +40,7 @@ module.exports = (options, intermediateRepresentation) => {
   }
 
   // @todo extract
-  const files = intermediateRepresentation.map(ir => {
-    const { source, documentation, sample } = ir;
-    const fileName = `${slug(source.$id)}.md`;
-    debug('Generating File %s', fileName);
-    return {
-      name: fileName,
-      content: `
-# ${source.title}
-
-
-### Example
-
-\`\`\`json
-${JSON.stringify(sample, null, 2)}
-\`\`\`
-`.trim(),
-      raw: ir,
-    };
-  });
+  const files = intermediateRepresentation.map(require('./schema-generator'));
 
   files.push(require('./readme-generator')(files));
 
