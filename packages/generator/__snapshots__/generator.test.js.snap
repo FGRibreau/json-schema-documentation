@@ -67,3 +67,114 @@ Age in years
 
 *Example*: 10"
 `;
+
+exports[`generate a complete documentation (restrict and map filenames) 3`] = `
+"# Generator \`option\` object
+
+The generator function only take one object as a parameter
+
+### Example
+
+\`\`\`json
+{
+  \\"input\\": {
+    \\"schemas\\": [
+      {}
+    ],
+    \\"samples\\": {}
+  },
+  \\"output\\": {}
+}
+\`\`\`
+
+
+### Documentation
+
+### \`.input\`
+
+**input configuration**
+
+Define what the generator will use to generate the intermediate representation of schemas
+
+*Type*: object
+
+### \`.input.schemas\`
+
+**Schemas to generate a documentation for**
+
+An array of json-schemas object
+
+*Type*: array
+
+### \`.input.schemas[]\`
+
+
+
+
+
+*Type*: object
+
+### \`.input.schemas[].$id\`
+
+**schema $id**
+
+schema.$id is required by json-schema-documentation-generator
+
+*Type*: string
+
+### \`.input.filter\`
+
+**Filter predicate over schema**
+
+(schema) => boolean
+
+### \`.input.samples\`
+
+**JSON-Schema Sample configuration**
+
+
+
+*Type*: object
+
+### \`.input.samples.generator\`
+
+**sample generator function**
+
+### \`.output\`
+
+**output configuration**
+
+Define what the generator will use to generate the representation of schema (a-k-a the documentation) based on the intermediate representation
+
+*Type*: object
+
+### \`.output.theme\`
+
+**Theme generator**
+
+Theme generator function to use to generate the documentation. Most of the time you will want to use \`require('json-schema-documentation-theme-default')\` here.
+
+### \`.output.options\`
+
+**Theme options**
+
+Check out theme documentation to see the available options
+
+*Type*: object"
+`;
+
+exports[`yield an error promise if an empty option object was given 1`] = `
+" Invalid options parameter
+-  should have required property 'input'
+-  should have required property 'output'"
+`;
+
+exports[`yield an error promise if no option are given 1`] = `
+" Invalid options parameter
+-  should be object"
+`;
+
+exports[`yield error is a schema does not have an id 1`] = `
+" Invalid options parameter
+- .input.schemas[1] should have required property '$id'"
+`;

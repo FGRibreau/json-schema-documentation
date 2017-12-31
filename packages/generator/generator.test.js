@@ -149,13 +149,14 @@ test('generate a complete documentation (restrict and map filenames)', () => {
         )
       ).toMatchSnapshot();
       expect(
-        pathExists(
+        require('fs').readFileSync(
           path.resolve(
             __dirname,
-            'demo/theme-default/httpsrawgithubusercontentcomfgribreaujson-schema-documentationmasterpackagesgeneratorschemasgenerator-optionjson.md'
-          )
+            'demo/theme-default/generator-option.json.md'
+          ),
+          'utf-8'
         )
-      ).toBe(true);
+      ).toMatchSnapshot();
       expect(
         pathExists(
           path.resolve(
