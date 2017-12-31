@@ -108,7 +108,7 @@ test('generate a complete documentation (default configuration)', () => {
   );
 });
 
-test('generate a complete documentation (restrict)', () => {
+test('generate a complete documentation (restrict and map filenames)', () => {
   return generator({
     input: {
       schemas: [
@@ -130,17 +130,24 @@ test('generate a complete documentation (restrict)', () => {
       options: {
         directory: {
           path: require('path').resolve(__dirname, 'demo/theme-default'),
+          mapFilename: schema => require('path').basename(schema.$id),
         },
       },
     },
   }).then(
     () => {
       expect(
-        pathExists(path.resolve(__dirname, 'demo/theme-default/README.md'))
-      ).toBe(true);
+        require('fs').readFileSync(
+          path.resolve(__dirname, 'demo/theme-default/README.md'),
+          'utf-8'
+        )
+      ).toMatchSnapshot();
       expect(
-        pathExists(path.resolve(__dirname, 'demo/theme-default/Person.md'))
-      ).toBe(true);
+        require('fs').readFileSync(
+          path.resolve(__dirname, 'demo/theme-default/Person.md'),
+          'utf-8'
+        )
+      ).toMatchSnapshot();
       expect(
         pathExists(
           path.resolve(

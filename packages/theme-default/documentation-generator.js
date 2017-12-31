@@ -3,16 +3,21 @@ const debug = require('debug')('default-theme:schema');
 const traverse = require('json-schema-traverse');
 const slug = require('slug');
 
-module.exports = ir => {
-  const { source, documentation, sample } = ir;
-  const fileName = `${slug(source.$id)}.md`;
-  debug('Generating File %s', fileName);
-  return {
-    name: fileName,
-    content: `
-# ${source.title || ''}
+module.exports = options => {
+  const filenameMapper =
+    options.directory.mapFilename || (schema => slug(schema.$id));
 
-${source.description || ''}
+  return ir => {
+    const { source: schema, documentation, sample } = ir;
+
+    const fileName = `${filenameMapper(schema)}.md`;
+    debug('Generating File %s', fileName);
+    return {
+      name: fileName,
+      content: `
+# ${schema.title || ''}
+
+${schema.description || ''}
 
 ### Example
 
@@ -23,10 +28,11 @@ ${JSON.stringify(sample, null, 2)}
 
 ### Documentation
 
-${mapSchemaKeys(source, toMarkdown).join('\n\n')}
+${mapSchemaKeys(schema, toMarkdown).join('\n\n')}
 
 `.trim(),
-    raw: ir,
+      raw: ir,
+    };
   };
 };
 
@@ -63,7 +69,7 @@ function toMarkdown(
   parentSchema,
   keyIndex
 ) {
-  console.log(schema);
+  // console.log(schema);
   return `
 ### \`${humanizeJsonPtr(jsonPtr)}\`
 

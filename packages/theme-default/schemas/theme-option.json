@@ -7,18 +7,26 @@
   "description":
     "The theme generator function only take one object as a parameter",
   "required": ["directory"],
+  "additionalProperties": false,
   "properties": {
     "directory": {
       "type": "object",
       "title": "Output directory configuration",
       "description": "",
       "required": ["path"],
+      "additionalProperties": false,
       "properties": {
         "path": {
           "type": "string",
           "title": "Output directory path",
           "description": "",
           "example": "static/"
+        },
+        "mapFilename": {
+          "title": "Filename Mapper",
+          "description":
+            "Function that takes a schema and yield a filename without the extension.",
+          "example": "```javascript\n(schema) => slug(schema.$id)\n```"
         }
       }
     }

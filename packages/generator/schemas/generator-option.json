@@ -6,6 +6,7 @@
   "title": "Generator `option` object",
   "description": "The generator function only take one object as a parameter",
   "required": ["input", "output"],
+  "additionalProperties": false,
   "properties": {
     "input": {
       "type": "object",
@@ -13,6 +14,7 @@
       "description":
         "Define what the generator will use to generate the intermediate representation of schemas",
       "required": ["schemas", "samples"],
+      "additionalProperties": false,
       "properties": {
         "schemas": {
           "type": "array",
@@ -56,17 +58,19 @@
       "description":
         "Define what the generator will use to generate the representation of schema (a-k-a the documentation) based on the intermediate representation",
       "required": ["theme", "options"],
+      "additionalProperties": false,
       "properties": {
         "theme": {
           "title": "Theme generator",
           "description":
-            "Theme generator function to use to generate the documentation",
+            "Theme generator function to use to generate the documentation. Most of the time you will want to use `require('json-schema-documentation-theme-default')` here.",
           "additionalProperties": true
         },
         "options": {
           "type": "object",
-          "title": "theme options",
-          "description": "",
+          "title": "Theme options",
+          "description":
+            "Check out theme documentation to see the available options",
           "required": [],
           "additionalProperties": true
         }

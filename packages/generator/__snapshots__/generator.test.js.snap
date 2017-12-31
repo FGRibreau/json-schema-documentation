@@ -1,17 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`yield an error promise if an empty option object was given 1`] = `
-" Invalid options parameter
--  should have required property 'input'
--  should have required property 'output'"
+exports[`generate a complete documentation (restrict and map filenames) 1`] = `
+"# Table of content
+
+* [https://raw.githubusercontent.com/fgribreau/json-schema-documentation/master/packages/generator/schemas/generator-option.json](generator-option.json.md)
+* [Person](Person.md)"
 `;
 
-exports[`yield an error promise if no option are given 1`] = `
-" Invalid options parameter
--  should be object"
-`;
+exports[`generate a complete documentation (restrict and map filenames) 2`] = `
+"# Person
 
-exports[`yield error is a schema does not have an id 1`] = `
-" Invalid options parameter
-- .input.schemas[1] should have required property '$id'"
+Describe a person
+
+### Example
+
+\`\`\`json
+{
+  \\"firstName\\": \\"dupont\\",
+  \\"lastName\\": \\"dupont\\",
+  \\"age\\": 10
+}
+\`\`\`
+
+
+### Documentation
+
+### \`.firstName\`
+
+
+
+
+
+*Type*: string
+
+
+
+
+
+*Example*: dupont
+
+### \`.lastName\`
+
+
+
+
+
+*Type*: string
+
+
+
+
+
+*Example*: dupont
+
+### \`.age\`
+
+
+
+Age in years
+
+*Type*: integer
+
+
+
+
+
+*Example*: 10"
 `;

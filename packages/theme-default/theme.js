@@ -40,7 +40,8 @@ module.exports = (options, intermediateRepresentation) => {
   }
 
   // @todo extract
-  const files = intermediateRepresentation.map(require('./schema-generator'));
+  const documentationGenerator = require('./documentation-generator')(options);
+  const files = intermediateRepresentation.map(documentationGenerator);
 
   files.push(require('./readme-generator')(files));
 
