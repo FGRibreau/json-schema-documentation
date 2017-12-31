@@ -1,6 +1,6 @@
 {
   "name": "json-schema-documentation-theme-default",
-  "version": "0.0.2",
+  "version": "0.2.0",
   "description": "Json-Schema documentation default theme",
   "main": "theme.js",
   "scripts": {
