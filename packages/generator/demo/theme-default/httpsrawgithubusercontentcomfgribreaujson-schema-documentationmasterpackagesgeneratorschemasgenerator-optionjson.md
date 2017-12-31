@@ -1,4 +1,4 @@
-# generator option object
+# Generator `option` object
 
 
 ### Example

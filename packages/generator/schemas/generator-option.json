@@ -3,7 +3,7 @@
   "$id":
     "https://raw.githubusercontent.com/fgribreau/json-schema-documentation/master/packages/generator/schemas/generator-option.json",
   "type": "object",
-  "title": "generator option object",
+  "title": "Generator `option` object",
   "description": "The generator function only take one object as a parameter",
   "required": ["input", "output"],
   "properties": {
