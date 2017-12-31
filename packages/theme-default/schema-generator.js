@@ -65,8 +65,9 @@ function toMarkdown(
 ) {
   console.log(schema);
   return `
-### ${iff(schema.type, () => `(${schema.type})`)} \`${schema.title || jsonPtr}\`
+### \`${jsonPtr}\`
 
+${iff(schema.title, () => `**${schema.title}**`)}
 ${iff(schema.description, () => schema.description)}
 
 ${iff(schema.type, () => `*Type*: ${schema.type}`)}

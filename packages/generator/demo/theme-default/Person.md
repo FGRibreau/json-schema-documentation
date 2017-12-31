@@ -15,13 +15,13 @@ Describe a person
 
 ### Documentation
 
-### (object) `Person`
+### `Person`
 
 Describe a person
 
 *Type*: object
 
-### (string) `/properties/firstName`
+### `/properties/firstName`
 
 
 
@@ -30,7 +30,7 @@ Describe a person
 
 *Example*: dupont
 
-### (string) `/properties/lastName`
+### `/properties/lastName`
 
 
 
@@ -39,7 +39,7 @@ Describe a person
 
 *Example*: dupont
 
-### (integer) `/properties/age`
+### `/properties/age`
 
 Age in years
 

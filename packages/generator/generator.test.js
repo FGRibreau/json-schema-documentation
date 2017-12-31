@@ -111,10 +111,7 @@ test('generate a complete documentation (restrict)', () => {
       ],
 
       filter: schema => {
-        return (
-          !schema.$id.includes('http://json-schema.org/') &&
-          !schema.$id.includes('generator-option')
-        );
+        return !schema.$id.includes('http://json-schema.org/');
       },
 
       samples: {
