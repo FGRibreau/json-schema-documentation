@@ -1,0 +1,21 @@
+{
+  "name": "json-schema-documentation-sample-generator",
+  "version": "0.0.2",
+  "description": "Json-Schema documentation sample generator (based on json-schema-example-loader)",
+  "main": "sample-generator.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch --notify"
+  },
+  "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "dependencies": {
+    "json-schema-example-loader": "^3.0.0"
+  }
+}

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should work, yep 1`] = `
+Object {
+  "age": 10,
+  "firstName": "dupont",
+  "lastName": "dupont",
+}
+`;
