@@ -42,7 +42,7 @@ test('yield error is a schema does not have an id', () => {
       theme: require('json-schema-documentation-theme-default'),
       options: {
         directory: {
-          path: require('path').resolve(__dirname, 'static'),
+          path: require('path').resolve(__dirname, 'demo'),
         },
       },
     },
@@ -74,23 +74,23 @@ test('generate a complete documentation (default configuration)', () => {
 
       options: {
         directory: {
-          path: require('path').resolve(__dirname, 'static/test1'),
+          path: require('path').resolve(__dirname, 'demo/theme-default'),
         },
       },
     },
   }).then(
     () => {
       expect(
-        pathExists(path.resolve(__dirname, 'static/test1/README.md'))
+        pathExists(path.resolve(__dirname, 'demo/theme-default/README.md'))
       ).toBe(true);
       expect(
-        pathExists(path.resolve(__dirname, 'static/test1/Person.md'))
+        pathExists(path.resolve(__dirname, 'demo/theme-default/Person.md'))
       ).toBe(true);
       expect(
         pathExists(
           path.resolve(
             __dirname,
-            'static/test1/httpsrawgithubusercontentcomfgribreaujson-schema-documentationmasterpackagesgeneratorschemasgenerator-optionjson.md'
+            'demo/test1/httpsrawgithubusercontentcomfgribreaujson-schema-documentationmasterpackagesgeneratorschemasgenerator-optionjson.md'
           )
         )
       ).toBe(true);
