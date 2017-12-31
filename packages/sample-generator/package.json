@@ -1,6 +1,6 @@
 {
   "name": "json-schema-documentation-sample-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Json-Schema documentation sample generator (based on json-schema-example-loader)",
   "main": "sample-generator.js",
   "scripts": {
