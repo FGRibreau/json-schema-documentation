@@ -1,12 +1,8 @@
 # JSON-Schema sample generator
 
-Based on
-[json-schema-example-loader](https://github.com/cloudflare/json-schema-example-loader/),
-used in
-[json-schema-documentationgenerator](https://github.com/FGRibreau/json-schema-documentation)
-project.
+Based on [json-schema-example-loader](https://github.com/cloudflare/json-schema-example-loader/) (for the current time being) used in [json-schema-documentationgenerator](https://github.com/FGRibreau/json-schema-documentation) project.
 
-Requires that you put `example` field in every properties of your json-schema.
+Requires that you put `example` or `default` field in every properties of your json-schema.
 
 ### Install
 
