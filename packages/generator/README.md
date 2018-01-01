@@ -1,18 +1,22 @@
 # JSON-Schema documentation generator
 
-### Philosophy
+## Philosophy
 
 Unlike many documentation generator we want to delegate as much as possible the logic on the theme side. It might be perceived as quite an unusual move but the direct consequence is that you'll never be limited by an intermediate representation of your raw data.
 
 Since the raw data will always be a valid JSON-schema (the generator first validate it), the data structure won't change for a defined json-schema draft version and your interface is thus guaranteed.
 
-### Install
+> ## ❤️ Shameless plug
+> - [**Charts, simple as a URL**. No more server-side rendering pain, 1 url = 1 chart](https://image-charts.com)
+> - [Looking for a free **Redis GUI**?](http://redsmin.com) [Or for **real-time alerting** & monitoring for Redis?](http://redsmin.com)
+
+## Install
 
 ```
 npm install json-schema-documentation-generator --save
 ```
 
-### Basic usage
+## Basic usage
 
 ```js
 // Code below will generate a
@@ -50,9 +54,9 @@ generator({
 );
 ```
 
-### Features
+## Features
 
 * [v] schema samples
 * [v] theme support
 
-### [Changelog](./CHANGELOG.md)
+## [Changelog](./CHANGELOG.md)
