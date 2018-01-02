@@ -1,4 +1,5 @@
 const path = require('path');
+const slug = require('slug');
 const generator = require('json-schema-documentation-generator');
 
 const argv = require('yargs')
@@ -32,6 +33,22 @@ argv
 
         throw err;
       }
+    },
+  })
+  .option('mapFilename', {
+    describe: 'Mapping function to change each schema filename',
+    default: '(schema) => slug(schema.$id)',
+    coerce: mapper => {
+      const vm = require('vm');
+      return new vm.Script(mapper);
+    },
+  })
+  .option('filter-regexp', {
+    describe: 'Only keep schemas where $id match the specified regexp',
+    default: '.*',
+    coerce: regexp => {
+      const reg = new RegExp(regexp);
+      return schema => reg.test(schema.$id);
     },
   })
   .option('sample', {
@@ -71,6 +88,8 @@ generator({
       require(path.resolve(process.cwd(), filePath))
     ),
 
+    filter: args.filterRegexp,
+
     // (required) schema sample generator
     samples: {
       generator: args.sample,
@@ -85,6 +104,10 @@ generator({
       // (required) override this to specify another generator
       directory: {
         path: args.output,
+        mapFilename: args.mapFilename.runInNewContext({
+          path: path,
+          slug: slug,
+        }),
       },
     },
   },
