@@ -58,7 +58,7 @@ See [full `option` documentation parameter object](documentation/generator-optio
 
 ## Features
 
-* [v] schema samples
-* [v] theme support
+* [x] schema samples
+* [x] theme support
 
 ## [Changelog](./CHANGELOG.md)
