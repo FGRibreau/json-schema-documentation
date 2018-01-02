@@ -24,7 +24,7 @@
     "cli"
   ],
   "bin": {
-    "json-schema-documentation-cli": "./bin/cli"
+    "json-schema-documentation-cli": "./bin/json-schema-documentation-cli"
   },
   "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
   "license": "MIT",
