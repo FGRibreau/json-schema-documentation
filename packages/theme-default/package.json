@@ -1,14 +1,13 @@
 {
   "name": "json-schema-documentation-theme-default",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Json-Schema documentation default theme",
   "main": "theme.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch --notify"
   },
-  "author":
-    "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
+  "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
   "license": "MIT",
   "repository": {
     "type": "git",

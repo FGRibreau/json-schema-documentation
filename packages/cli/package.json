@@ -1,6 +1,6 @@
 {
   "name": "json-schema-documentation-cli",
-  "version": "0.0.2",
+  "version": "0.5.0",
   "description": "Generate documentation for JSON schemas through a command line interface",
   "main": "cli.js",
   "scripts": {
@@ -31,9 +31,9 @@
   "dependencies": {
     "common-env": "^6.1.0",
     "debug": "^3.1.0",
-    "json-schema-documentation-generator": "^0.4.0",
-    "json-schema-documentation-sample-generator": "^0.1.1",
-    "json-schema-documentation-theme-default": "^0.4.0",
+    "json-schema-documentation-generator": "^0.5.0",
+    "json-schema-documentation-sample-generator": "^0.5.0",
+    "json-schema-documentation-theme-default": "^0.5.0",
     "lodash": "^4.17.4"
   },
   "engines": {

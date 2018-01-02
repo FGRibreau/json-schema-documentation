@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/fgribreau/json-schema-documentation/compare/v0.4.0...v0.5.0) (2018-01-02)
+
+
+### Bug Fixes
+
+* **generator:** improved package.json ([dda055e](https://github.com/fgribreau/json-schema-documentation/commit/dda055e))
+* **sample-generator:** improved package.json ([d86b040](https://github.com/fgribreau/json-schema-documentation/commit/d86b040))
+* **theme-default:** improved package.json ([9af07f4](https://github.com/fgribreau/json-schema-documentation/commit/9af07f4))
+
+
+### Features
+
+* **cli:** added CLI ([77f68ab](https://github.com/fgribreau/json-schema-documentation/commit/77f68ab))
+
+
+
+
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/FGRibreau/json-schema-documentation/compare/v0.3.0...v0.4.0) (2017-12-31)
 

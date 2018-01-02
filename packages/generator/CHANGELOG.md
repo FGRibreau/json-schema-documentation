@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/FGRibreau/json-schema-documentation/compare/v0.4.0...v0.5.0) (2018-01-02)
+
+
+### Bug Fixes
+
+* **generator:** improved package.json ([dda055e](https://github.com/FGRibreau/json-schema-documentation/commit/dda055e))
+
+
+
+
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/FGRibreau/json-schema-documentation/compare/v0.3.0...v0.4.0) (2017-12-31)
 
