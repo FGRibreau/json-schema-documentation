@@ -1,6 +1,6 @@
 {
   "name": "json-schema-documentation-cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Generate documentation for JSON schemas through a command line interface",
   "main": "src/cli.js",
   "scripts": {
@@ -29,9 +29,9 @@
   "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
   "license": "MIT",
   "dependencies": {
-    "json-schema-documentation-generator": "^1.1.0",
+    "json-schema-documentation-generator": "^1.2.1",
     "json-schema-documentation-sample-generator": "^1.1.0",
-    "json-schema-documentation-theme-default": "^1.1.0",
+    "json-schema-documentation-theme-default": "^1.2.1",
     "slug": "^0.9.1",
     "yargs": "^10.0.3"
   },
