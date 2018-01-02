@@ -1,6 +1,6 @@
 {
   "name": "json-schema-documentation-cli",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Generate documentation for JSON schemas through a command line interface",
   "main": "cli.js",
   "scripts": {
