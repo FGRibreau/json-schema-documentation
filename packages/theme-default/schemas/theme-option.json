@@ -26,7 +26,7 @@
           "title": "Filename Mapper",
           "description":
             "Function that takes a schema and yield a filename without the extension.",
-          "example": "```javascript\n(schema) => slug(schema.$id)\n```"
+          "example": "(schema) => slug(schema.$id)"
         }
       }
     }

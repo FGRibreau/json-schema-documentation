@@ -8,7 +8,7 @@ The theme generator function only take one object as a parameter
 {
   "directory": {
     "path": "static/",
-    "mapFilename": "```javascript\n(schema) => slug(schema.$id)\n```"
+    "mapFilename": "(schema) => slug(schema.$id)"
   }
 }
 ```
@@ -50,6 +50,4 @@ Function that takes a schema and yield a filename without the extension.
 
 
 
-*Example*: ```javascript
-(schema) => slug(schema.$id)
-```
+*Example*: (schema) => slug(schema.$id)
