@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.5.3"></a>
+## [0.5.3](https://github.com/fgribreau/json-schema-documentation/compare/v0.5.2...v0.5.3) (2018-01-02)
+
+
+### Bug Fixes
+
+* **cli:** lighter package ([629a8c0](https://github.com/fgribreau/json-schema-documentation/commit/629a8c0))
+
+
+
+
 <a name="0.5.2"></a>
 ## [0.5.2](https://github.com/fgribreau/json-schema-documentation/compare/v0.5.1...v0.5.2) (2018-01-02)
 
