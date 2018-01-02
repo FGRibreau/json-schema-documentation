@@ -1,18 +1,43 @@
 {
   "name": "json-schema-documentation-cli",
   "version": "0.0.2",
-  "description": "Json-Schema documentation cli",
+  "description": "Generate documentation for JSON schemas through a command line interface",
   "main": "cli.js",
   "scripts": {
+    "start": "node cli.js",
     "test": "jest",
     "test:watch": "jest --watch --notify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fgribreau/json-schema-documentation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fgribreau/json-schema-documentation/issues"
+  },
+  "homepage": "https://github.com/fgribreau/json-schema-documentation",
+  "keywords": [
+    "json-schema",
+    "documentation",
+    "json-schema-documentation",
+    "documentation generator",
+    "cli"
+  ],
+  "bin": {
+    "json-schema-documentation-cli": "./bin/cli"
   },
   "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
   "license": "MIT",
   "dependencies": {
-    "ajv": "^5.5.0",
     "common-env": "^6.1.0",
+    "debug": "^3.1.0",
+    "json-schema-documentation-generator": "^0.4.0",
+    "json-schema-documentation-sample-generator": "^0.1.1",
+    "json-schema-documentation-theme-default": "^0.4.0",
     "lodash": "^4.17.4"
+  },
+  "engines": {
+    "node": ">=8"
   },
   "publishConfig": {
     "access": "public"

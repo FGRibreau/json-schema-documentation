@@ -12,6 +12,21 @@
     "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
   "license": "MIT",
   "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fgribreau/json-schema-documentation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fgribreau/json-schema-documentation/issues"
+  },
+  "homepage": "https://github.com/fgribreau/json-schema-documentation",
+  "keywords": [
+    "json-schema",
+    "documentation",
+    "json-schema-documentation",
+    "documentation generator",
+    "cli"
+  ],
   "devDependencies": {
     "lerna": "^2.5.1"
   }
