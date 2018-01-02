@@ -55,7 +55,7 @@ argv
   })
   .option('output', {
     describe: 'Output directory',
-    coerce: outputDirectory => path.resolve(__dirname, outputDirectory),
+    coerce: outputDirectory => path.resolve(process.cwd(), outputDirectory),
   });
 
 const args = argv
