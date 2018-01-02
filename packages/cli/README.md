@@ -21,7 +21,9 @@ docker run -it fgribreau/json-schema-documentation-cli
 
 ```bash
 npm install json-schema-documentation-cli --global
+```
 
+```
 json-schema-documentation-cli --help
 
 Options:
@@ -42,8 +44,18 @@ Please provide a `schemas` and a `output` arguments that specify JSON schema fil
 
 ### Basic usage
 
+Read every json files from `path/to/schemas` and output documentation in the `static` directory.
+
 ```bash
-json-schema-documentation-cli
+json-schema-documentation-cli --schemas path/to/schemas/*.json --output ./static
+```
+
+### Advanced usage
+
+Only keep schema where `schema.$id` contains `org.company` and change generated filename to each `schema.$id` value.
+
+```bash
+json-schema-documentation-cli --schemas path/to/schemas/*.json --output ./static --filter-regexp "org.company" --mapFilename "(schema) => schema.$id"
 ```
 
 ### [Changelog](./CHANGELOG.md)
