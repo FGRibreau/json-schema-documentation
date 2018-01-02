@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.5.2"></a>
+## [0.5.2](https://github.com/fgribreau/json-schema-documentation/compare/v0.5.1...v0.5.2) (2018-01-02)
+
+
+### Bug Fixes
+
+* **cli:** fix wrong path ([bb94432](https://github.com/fgribreau/json-schema-documentation/commit/bb94432))
+
+
+
+
 <a name="0.5.1"></a>
 ## [0.5.1](https://github.com/fgribreau/json-schema-documentation/compare/v0.5.0...v0.5.1) (2018-01-02)
 
