@@ -5,7 +5,8 @@
   "main": "theme.js",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch --notify"
+    "test:watch": "jest --watch --notify",
+    "documentation:generate": "json-schema-documentation-cli --schemas schemas/*.json --filter-regexp json-schema-documentation --output documentation --mapFilename '(schema) => path.basename(schema.$id, `.json`)'"
   },
   "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
   "license": "MIT",
@@ -27,7 +28,8 @@
     "access": "public"
   },
   "devDependencies": {
-    "jest": "^21.2.1"
+    "jest": "^21.2.1",
+    "json-schema-documentation-cli": "1.*.*"
   },
   "dependencies": {
     "ajv": "^5.5.0",
