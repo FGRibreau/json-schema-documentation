@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "jest": "^21.2.1",
-    "json-schema-documentation-cli": "^1.2.0",
+    "json-schema-documentation-cli": "1.*.*",
     "json-schema-documentation-sample-generator": "1.*.*",
     "json-schema-documentation-theme-default": "1.*.*",
     "path-exists": "^3.0.0"
