@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/fgribreau/json-schema-documentation/compare/v0.5.4...v1.1.0) (2018-01-02)
+
+
+### Features
+
+* **cli:** v1.0 ([26c3b87](https://github.com/fgribreau/json-schema-documentation/commit/26c3b87))
+
+
+
+
 <a name="0.5.4"></a>
 ## [0.5.4](https://github.com/fgribreau/json-schema-documentation/compare/v0.5.3...v0.5.4) (2018-01-02)
 
