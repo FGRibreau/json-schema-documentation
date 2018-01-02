@@ -4,11 +4,15 @@
   "description": "Json-Schema documentation generator",
   "main": "generator.js",
   "scripts": {
+    "prepublish": "npm run --silent documentation:generate",
     "test": "jest",
     "test:watch": "jest --watch --notify",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "documentation:generate":
+      "json-schema-documentation-cli --schemas schemas/*.json --filter-regexp json-schema-documentation --output documentation --mapFilename '(schema) => path.basename(schema.$id, `.json`)'"
   },
-  "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
+  "author":
+    "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
   "license": "MIT",
   "dependencies": {
     "ajv": "^5.5.2",
@@ -18,6 +22,10 @@
   },
   "bugs": {
     "url": "https://github.com/fgribreau/json-schema-documentation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fgribreau/json-schema-documentation.git"
   },
   "homepage": "https://github.com/fgribreau/json-schema-documentation",
   "keywords": [
@@ -31,8 +39,9 @@
   },
   "devDependencies": {
     "jest": "^21.2.1",
-    "json-schema-documentation-sample-generator": "^1.1.0",
-    "json-schema-documentation-theme-default": "^1.1.0",
+    "json-schema-documentation-cli": "^1.2.0",
+    "json-schema-documentation-sample-generator": "1.*.*",
+    "json-schema-documentation-theme-default": "1.*.*",
     "path-exists": "^3.0.0"
   }
 }

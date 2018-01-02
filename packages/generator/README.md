@@ -54,6 +54,8 @@ generator({
 );
 ```
 
+See [full `option` documentation parameter object](documentation/generator-option.md).
+
 ## Features
 
 * [v] schema samples
