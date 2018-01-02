@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/fgribreau/json-schema-documentation/compare/v1.1.0...v1.2.0) (2018-01-02)
+
+
+### Features
+
+* **cli:** support for `filter-regexp` and `mapFilename` ([51009be](https://github.com/fgribreau/json-schema-documentation/commit/51009be))
+
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/fgribreau/json-schema-documentation/compare/v0.5.4...v1.1.0) (2018-01-02)
 
