@@ -1,5 +1,409 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`generate a complete documentation (default configuration) 1`] = `
+"# Table of content
+
+* [http://json-schema.org/draft-06/schema#](httpjson-schemaorgdraft-06schema.md)
+* [https://raw.githubusercontent.com/fgribreau/json-schema-documentation/master/packages/generator/schemas/generator-option.json](httpsrawgithubusercontentcomfgribreaujson-schema-documentationmasterpackagesgeneratorschemasgenerator-optionjson.md)
+* [Person](Person.md)"
+`;
+
+exports[`generate a complete documentation (default configuration) 2`] = `
+"# Person
+
+Describe a person
+
+### Example
+
+\`\`\`json
+{
+  \\"firstName\\": \\"dupont\\",
+  \\"lastName\\": \\"dupont\\",
+  \\"age\\": 10
+}
+\`\`\`
+
+
+### Documentation
+
+### \`.firstName\`
+
+*Type*: string
+
+*Example*: \`dupont\`
+
+### \`.lastName\`
+
+*Type*: string
+
+*Example*: \`dupont\`
+
+### \`.age\`
+
+Age in years
+
+*Type*: integer
+
+*Example*: \`10\`"
+`;
+
+exports[`generate a complete documentation (default configuration) 3`] = `
+"# Generator \`option\` object
+
+The generator function only take one object as a parameter
+
+### Example
+
+\`\`\`json
+{
+  \\"input\\": {
+    \\"schemas\\": [
+      {}
+    ],
+    \\"samples\\": {}
+  },
+  \\"output\\": {}
+}
+\`\`\`
+
+
+### Documentation
+
+### \`.input\`
+
+**input configuration**
+
+Define what the generator will use to generate the intermediate representation of schemas
+
+*Type*: object
+
+### \`.input.schemas\`
+
+**Schemas to generate a documentation for**
+
+An array of json-schemas object
+
+*Type*: array
+
+### \`.input.schemas[]\`
+
+*Type*: object
+
+### \`.input.schemas[].$id\`
+
+**schema $id**
+
+schema.$id is required by json-schema-documentation-generator
+
+*Type*: string
+
+### \`.input.filter\`
+
+**Filter predicate over schema**
+
+(schema) => boolean
+
+### \`.input.samples\`
+
+**JSON-Schema Sample configuration**
+
+*Type*: object
+
+### \`.input.samples.generator\`
+
+**sample generator function**
+
+### \`.output\`
+
+**output configuration**
+
+Define what the generator will use to generate the representation of schema (a-k-a the documentation) based on the intermediate representation
+
+*Type*: object
+
+### \`.output.theme\`
+
+**Theme generator**
+
+Theme generator function to use to generate the documentation. Most of the time you will want to use \`require('json-schema-documentation-theme-default')\` here.
+
+### \`.output.options\`
+
+**Theme options**
+
+Check out theme documentation to see the available options
+
+*Type*: object"
+`;
+
+exports[`generate a complete documentation (default configuration) 4`] = `
+"# Core schema meta-schema
+
+
+
+### Example
+
+\`\`\`json
+{
+  \\"examples\\": [
+    {}
+  ],
+  \\"items\\": {},
+  \\"uniqueItems\\": false,
+  \\"definitions\\": {},
+  \\"properties\\": {},
+  \\"patternProperties\\": {},
+  \\"type\\": {}
+}
+\`\`\`
+
+
+### Documentation
+
+### \`definitionsschemaArray\`
+
+*Type*: array
+
+*Minimum items*: 1
+
+### \`definitionsschemaArray[]\`
+
+### \`definitionsnonNegativeInteger\`
+
+*Type*: integer
+
+### \`definitionsnonNegativeIntegerDefault0\`
+
+### \`definitionsnonNegativeIntegerDefault0allOf0\`
+
+### \`definitionsnonNegativeIntegerDefault0allOf1\`
+
+### \`definitionssimpleTypes\`
+
+*Allowed values*: \`array\` \`boolean\` \`integer\` \`null\` \`number\` \`object\` \`string\`
+
+### \`definitionsstringArray\`
+
+*Type*: array
+
+### \`definitionsstringArray[]\`
+
+*Type*: string
+
+### \`.$id\`
+
+*Type*: string
+
+### \`.$schema\`
+
+*Type*: string
+
+### \`.$ref\`
+
+*Type*: string
+
+### \`.title\`
+
+*Type*: string
+
+### \`.description\`
+
+*Type*: string
+
+### \`.default\`
+
+### \`.examples\`
+
+*Type*: array
+
+### \`.examples[]\`
+
+### \`.multipleOf\`
+
+*Type*: number
+
+### \`.maximum\`
+
+*Type*: number
+
+### \`.exclusiveMaximum\`
+
+*Type*: number
+
+### \`.minimum\`
+
+*Type*: number
+
+### \`.exclusiveMinimum\`
+
+*Type*: number
+
+### \`.maxLength\`
+
+### \`.minLength\`
+
+### \`.pattern\`
+
+*Type*: string
+
+### \`.additionalItems\`
+
+### \`.[]\`
+
+### \`.[]anyOf0\`
+
+### \`.[]anyOf1\`
+
+### \`.[]default\`
+
+### \`.maxItems\`
+
+### \`.minItems\`
+
+### \`.uniqueItems\`
+
+*Type*: boolean
+
+### \`.contains\`
+
+### \`.maxProperties\`
+
+### \`.minProperties\`
+
+### \`.required\`
+
+### \`.additionalProperties\`
+
+### \`.definitions\`
+
+*Type*: object
+
+### \`.definitionsadditionalProperties\`
+
+### \`.definitionsdefault\`
+
+### \`..\`
+
+*Type*: object
+
+### \`..additionalProperties\`
+
+### \`..default\`
+
+### \`.patternProperties\`
+
+*Type*: object
+
+### \`.patternPropertiesadditionalProperties\`
+
+### \`.patternPropertiesdefault\`
+
+### \`.dependencies\`
+
+*Type*: object
+
+### \`.dependenciesadditionalProperties\`
+
+### \`.dependenciesadditionalPropertiesanyOf0\`
+
+### \`.dependenciesadditionalPropertiesanyOf1\`
+
+### \`.propertyNames\`
+
+### \`.const\`
+
+### \`.enum\`
+
+*Type*: array
+
+*Minimum items*: 1
+
+### \`.type\`
+
+### \`.typeanyOf0\`
+
+### \`.typeanyOf1\`
+
+*Type*: array
+
+*Minimum items*: 1
+
+### \`.typeanyOf1[]\`
+
+### \`.format\`
+
+*Type*: string
+
+### \`.allOf\`
+
+### \`.anyOf\`
+
+### \`.oneOf\`
+
+### \`.not\`
+
+### \`default\`"
+`;
+
+exports[`generate a complete documentation (full test) 1`] = `
+"# FullTest-title
+
+FullTest-description
+
+### Example
+
+\`\`\`json
+{
+  \\"configurations\\": [
+    {
+      \\"endpoint\\": {}
+    }
+  ]
+}
+\`\`\`
+
+
+### Documentation
+
+### \`.configurations\`
+
+**configuration-object**
+
+configuration-description
+
+*Type*: array
+
+*Minimum items*: 1
+
+*Maximum items*: 10
+
+### \`.configurations[]\`
+
+*Type*: object
+
+### \`.configurations[].version\`
+
+**Basic Semantic version**
+
+MAJOR.MINOR.PATCH, see https://semver.org/
+
+*Type*: string
+
+*Pattern*: \`^[0-9]+\\\\.[0-9]+\\\\.[0-9]+$\`
+
+*Examples*: \`0.0.1\` \`1.0.0\`
+
+### \`.configurations[].endpoint\`
+
+*Type*: object
+
+### \`.configurations[].method\`
+
+*Type*: string
+
+*Allowed values*: \`GET\` \`POST\`"
+`;
+
 exports[`generate a complete documentation (restrict and map filenames) 1`] = `
 "# Table of content
 
@@ -27,45 +431,23 @@ Describe a person
 
 ### \`.firstName\`
 
-
-
-
-
 *Type*: string
 
-
-
-
-
-*Example*: dupont
+*Example*: \`dupont\`
 
 ### \`.lastName\`
 
-
-
-
-
 *Type*: string
 
-
-
-
-
-*Example*: dupont
+*Example*: \`dupont\`
 
 ### \`.age\`
-
-
 
 Age in years
 
 *Type*: integer
 
-
-
-
-
-*Example*: 10"
+*Example*: \`10\`"
 `;
 
 exports[`generate a complete documentation (restrict and map filenames) 3`] = `
@@ -108,10 +490,6 @@ An array of json-schemas object
 
 ### \`.input.schemas[]\`
 
-
-
-
-
 *Type*: object
 
 ### \`.input.schemas[].$id\`
@@ -131,8 +509,6 @@ schema.$id is required by json-schema-documentation-generator
 ### \`.input.samples\`
 
 **JSON-Schema Sample configuration**
-
-
 
 *Type*: object
 

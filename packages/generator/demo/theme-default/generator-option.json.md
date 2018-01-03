@@ -37,10 +37,6 @@ An array of json-schemas object
 
 ### `.input.schemas[]`
 
-
-
-
-
 *Type*: object
 
 ### `.input.schemas[].$id`
@@ -60,8 +56,6 @@ schema.$id is required by json-schema-documentation-generator
 ### `.input.samples`
 
 **JSON-Schema Sample configuration**
-
-
 
 *Type*: object
 

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flatten schema 1`] = `
+Object {
+  "$id": "FullTest",
+  "description": "FullTest-description",
+  "properties": Object {
+    "configurations": Object {
+      "description": "configuration-description",
+      "items": Object {
+        "properties": Object {
+          "endpoint": Object {
+            "properties": Object {},
+            "required": Array [
+              "url",
+              "method",
+              "pure",
+              "parameters",
+              "ui",
+            ],
+            "type": "object",
+          },
+          "method": Object {
+            "enum": Array [
+              "GET",
+              "POST",
+            ],
+            "type": "string",
+          },
+          "version": Object {
+            "$ref": "defs.json#/definitions/BasicSemVer",
+            "description": "MAJOR.MINOR.PATCH, see https://semver.org/",
+            "examples": Array [
+              "0.0.1",
+              "1.0.0",
+            ],
+            "pattern": "^[0-9]+\\\\.[0-9]+\\\\.[0-9]+$",
+            "title": "Basic Semantic version",
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "version",
+          "endpoint",
+        ],
+        "type": "object",
+      },
+      "maxItems": 10,
+      "minItems": 1,
+      "title": "configuration-object",
+      "type": "array",
+    },
+  },
+  "required": Array [
+    "configurations",
+  ],
+  "title": "FullTest-title",
+  "type": "object",
+}
+`;

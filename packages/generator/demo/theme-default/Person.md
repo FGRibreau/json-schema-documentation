@@ -17,42 +17,20 @@ Describe a person
 
 ### `.firstName`
 
-
-
-
-
 *Type*: string
 
-
-
-
-
-*Example*: dupont
+*Example*: `dupont`
 
 ### `.lastName`
 
-
-
-
-
 *Type*: string
 
-
-
-
-
-*Example*: dupont
+*Example*: `dupont`
 
 ### `.age`
-
-
 
 Age in years
 
 *Type*: integer
 
-
-
-
-
-*Example*: 10
+*Example*: `10`

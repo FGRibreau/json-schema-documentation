@@ -80,27 +80,35 @@ test('generate a complete documentation (default configuration)', () => {
   }).then(
     () => {
       expect(
-        pathExists(path.resolve(__dirname, 'demo/theme-default-full/README.md'))
-      ).toBe(true);
+        require('fs').readFileSync(
+          path.resolve(__dirname, 'demo/theme-default-full/README.md'),
+          'utf-8'
+        )
+      ).toMatchSnapshot();
       expect(
-        pathExists(path.resolve(__dirname, 'demo/theme-default-full/Person.md'))
-      ).toBe(true);
+        require('fs').readFileSync(
+          path.resolve(__dirname, 'demo/theme-default-full/Person.md'),
+          'utf-8'
+        )
+      ).toMatchSnapshot();
       expect(
-        pathExists(
+        require('fs').readFileSync(
           path.resolve(
             __dirname,
             'demo/theme-default-full/httpsrawgithubusercontentcomfgribreaujson-schema-documentationmasterpackagesgeneratorschemasgenerator-optionjson.md'
-          )
+          ),
+          'utf-8'
         )
-      ).toBe(true);
+      ).toMatchSnapshot();
       expect(
-        pathExists(
+        require('fs').readFileSync(
           path.resolve(
             __dirname,
             'demo/theme-default-full/httpjson-schemaorgdraft-06schema.md'
-          )
+          ),
+          'utf-8'
         )
-      ).toBe(true);
+      ).toMatchSnapshot();
     },
     err => {
       throw err;
@@ -165,6 +173,53 @@ test('generate a complete documentation (restrict and map filenames)', () => {
           )
         )
       ).toBe(false);
+    },
+    err => {
+      throw err;
+    }
+  );
+});
+
+test('generate a complete documentation (full test)', () => {
+  return generator({
+    input: {
+      schemas: [
+        require('./fixtures/test.json'),
+        require('./fixtures/defs.json'),
+      ],
+
+      filter: schema => {
+        return (
+          !schema.$id.includes('http://json-schema.org/') &&
+          !schema.$id.includes('defs')
+        );
+      },
+
+      samples: {
+        generator: require('json-schema-documentation-sample-generator'),
+      },
+    },
+    output: {
+      theme: require('json-schema-documentation-theme-default'),
+
+      options: {
+        directory: {
+          path: require('path').resolve(
+            __dirname,
+            'demo/theme-default-full-test'
+          ),
+          mapFilename: schema => require('path').basename(schema.$id),
+        },
+      },
+    },
+  }).then(
+    () => {
+      expect(
+        require('fs').readFileSync(
+          path.resolve(__dirname, 'demo/theme-default-full-test/FullTest.md'),
+          'utf-8'
+        )
+      ).toMatchSnapshot();
     },
     err => {
       throw err;
