@@ -1,3 +1,4 @@
+const compact = require('lodash/compact');
 const last = require('lodash/last');
 const debug = require('debug')('default-theme:schema');
 const traverse = require('json-schema-traverse');
@@ -69,23 +70,33 @@ function toMarkdown(
   parentSchema,
   keyIndex
 ) {
-  // console.log(schema);
+  console.log('ok', schema);
   return `
 ### \`${humanizeJsonPtr(jsonPtr)}\`
 
-${iff(schema.title, () => `**${schema.title}**`)}
-
-${iff(schema.description, () => schema.description)}
-
-${iff(schema.type, () => `*Type*: ${schema.type}`)}
-
-${iff(schema.minimum, () => `*Minimum*: ${schema.minimum}`)}
-
-${iff(schema.maximum, () => `*Maximum*: ${schema.maximum}`)}
-
-${iff(schema.example, () => `*Example*: ${schema.example}`)}
-
-  `.trim();
+${compact([
+    iff(schema.title, () => `**${schema.title}**`),
+    iff(schema.description, () => schema.description),
+    iff(schema.type, () => `*Type*: ${schema.type}`),
+    iff(
+      schema.enum,
+      () =>
+        `*Allowed values*: ${schema.enum.map(ex => '`' + ex + '`').join(' ')}`
+    ),
+    iff(schema.minItems, () => `*Minimum items*: ${schema.minItems}`),
+    iff(schema.maxItems, () => `*Maximum items*: ${schema.maxItems}`),
+    iff(schema.minLength, () => `*Minimum length*: ${schema.minLength}`),
+    iff(schema.maxLength, () => `*Maximum length*: ${schema.maxLength}`),
+    iff(schema.minimum, () => `*Minimum*: ${schema.minimum}`),
+    iff(schema.maximum, () => `*Maximum*: ${schema.maximum}`),
+    iff(schema.pattern, () => `*Pattern*: \`${schema.pattern}\``),
+    iff(schema.example, () => `*Example*: \`${schema.example}\``),
+    iff(
+      schema.examples,
+      () => `*Examples*: ${schema.examples.map(ex => '`' + ex + '`').join(' ')}`
+    ),
+  ]).join('\n\n')}
+`.trim();
 }
 
 function iff(v, f) {
