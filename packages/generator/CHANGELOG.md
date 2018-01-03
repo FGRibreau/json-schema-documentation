@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/fgribreau/json-schema-documentation/compare/v1.2.1...v1.3.0) (2018-01-03)
+
+
+### Features
+
+* **json-schema-documentation-generator:** flatten schema ([2d91eac](https://github.com/fgribreau/json-schema-documentation/commit/2d91eac))
+
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/fgribreau/json-schema-documentation/compare/v1.2.0...v1.2.1) (2018-01-02)
 
