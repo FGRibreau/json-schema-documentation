@@ -27,6 +27,6 @@
     "cli"
   ],
   "devDependencies": {
-    "lerna": "^2.10.2"
+    "lerna": "^3.18.1"
   }
 }
