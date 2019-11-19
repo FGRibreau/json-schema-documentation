@@ -33,7 +33,7 @@
     "json-schema-documentation-sample-generator": "^1.1.0",
     "json-schema-documentation-theme-default": "^1.4.1",
     "slug": "^0.9.1",
-    "yargs": "^10.0.3"
+    "yargs": "^15.0.2"
   },
   "engines": {
     "node": ">=8"
