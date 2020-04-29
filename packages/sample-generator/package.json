@@ -13,7 +13,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "jest": "^21.2.1"
+    "jest": "^25.5.0"
   },
   "bugs": {
     "url": "https://github.com/fgribreau/json-schema-documentation/issues"

@@ -39,7 +39,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "jest": "^21.2.1",
+    "jest": "^25.5.0",
     "json-schema-documentation-cli": "^1.4.1",
     "json-schema-documentation-sample-generator": "1.*.*",
     "json-schema-documentation-theme-default": "^1.4.1",
