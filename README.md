@@ -1,6 +1,6 @@
 # JSON-Schema documentation project
 
-![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg?)
+![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg?) [![Slack](https://img.shields.io/badge/Slack-Join%20our%20tech%20community-17202A?logo=slack)](https://join.slack.com/t/fgribreau/shared_invite/zt-edpjwt2t-Zh39mDUMNQ0QOr9qOj~jrg)
 
 > ## ❤️ Shameless plug
 > - [**Charts, simple as a URL**. No more server-side rendering pain, 1 url = 1 chart](https://image-charts.com)
