@@ -29,8 +29,8 @@
     </td>
     <td align="center" width="175">
       <a href="https://netir.fr/?mtm_source=github&mtm_medium=sponsor&mtm_campaign=netir&mtm_content=json-schema-documentation">
-        <img src="assets/sponsors/netir.svg" height="60" alt="NetIR"/><br/>
-        <b>NetIR</b>
+        <img src="assets/sponsors/netir.svg" height="60" alt="Netir"/><br/>
+        <b>Netir</b>
       </a><br/>
       <sub>Hire vetted French freelance API designers via mentored marketplace.</sub>
     </td>
